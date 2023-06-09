@@ -230,7 +230,7 @@ picture {
     }
 
     .card {
-        width: 23.34rem;
+        width: min(30vw, 23.34rem);
         margin-block: 1rem;
         padding-top: 1.87rem;
         padding-inline: 2rem;
