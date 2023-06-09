@@ -18,7 +18,8 @@
   3. Allow percentage-based heights in the application
 */
 html,
-body {
+.main-container,
+.card-container {
     height: 100%;
 }
 
@@ -30,6 +31,11 @@ body {
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--VERY-LIGHT-GRAY);
+    display: flex;
+    align-items: center;
+    height: auto;
+
 }
 
 /*
@@ -82,9 +88,165 @@ h6 {
     --BLUE: hsl(212, 86%, 64%);
 
     --VERY-DARK-BLUE: hsl(234, 12%, 34%);
+    --BLUE-SHADOW: hsla(212, 48%, 45%, 0.17);
     --GRAYISH-BLUE: hsl(229, 6%, 66%);
     --VERY-LIGHT-GRAY: hsl(0, 0%, 98%);
+    --WHITE: white;
 
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
+}
+
+.main-container {
+    width: 83.2%;
+    margin-inline: auto;
+    display: inline-block;
+    padding-block: 5.5rem 3.5rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+h1 {
+    color: var(--VERY-DARK-BLUE);
+    font-size: 1.64rem;
+    font-weight: 200;
+    margin-bottom: 1.1rem;
+}
+
+h1 span {
+    display: block;
+    font-weight: 600;
+}
+
+.card {
+    background-color: var(--WHITE);
+    border-radius: 0.5rem;
+    position: relative;
+    margin-bottom: 1.7rem;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 0 1.2rem 1.3rem -0.6rem var(--BLUE-SHADOW);
+}
+
+.card::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--WHITE);
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: var(--WHITE);
+}
+
+header p {
+    color: var(--GRAYISH-BLUE);
+    line-height: 1.67rem;
+    margin-top: 1.15rem
+}
+
+.cyan {
+    border-top: 4px solid var(--CYAN);
+}
+
+.red {
+    border-top: 4px solid var(--RED);
+}
+
+.orange {
+    border-top: 4px solid var(--ORANGE);
+}
+
+.blue {
+    border-top: 4px solid var(--BLUE);
+}
+
+h2 {
+    color: var(--VERY-DARK-BLUE);
+    font-size: 1.33rem;
+    font-weight: 600;
+    margin-bottom: 0.45rem;
+}
+
+.card p {
+    color: var(--GRAYISH-BLUE);
+    font-size: 0.89rem;
+    margin-bottom: 6.4rem;
+}
+
+picture {
+    position: absolute;
+    bottom: 1.9rem;
+    right: 1.9rem;
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+@media screen and (min-width: 601px) {
+    .main-container {
+        width: 100%;
+        padding-block: 5.3rem 4.5rem;
+    }
+
+    header {
+        margin-bottom: 3rem;
+    }
+
+    h1 {
+        font-size: 2.43rem;
+        line-height: 3.4rem;
+    }
+
+    header {
+        margin-bottom: 3.2rem;
+    }
+
+    header p {
+        max-width: 35rem;
+        margin-inline: auto;
+    }
+
+    .card-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .two-middle-cards {
+        display: flex;
+        flex-direction: column;
+        margin-inline: 2rem;
+    }
+
+    .card {
+        width: 23.34rem;
+        margin-block: 1rem;
+        padding-top: 1.87rem;
+        padding-inline: 2rem;
+        box-shadow: 0 1rem 1.3rem -0.1rem var(--BLUE-SHADOW);
+    }
+
+    .card p {
+        margin-block: 0.5rem 7.45rem;
+        padding-right: 1rem;
+        line-height: 1.54rem;
+    }
+
+    picture {
+        bottom: 2.15rem;
+        right: 2.1rem;
+        width: 4.25rem;
+        height: 4.25rem;
+    }
 }
